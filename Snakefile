@@ -128,7 +128,6 @@ rule unzip:
     singularity:
         samtools
     shell:
-        'mkdir {params.wd} && '
         'tar -zxf {input} '
         '-C {params.wd} '
         '--strip-components 1'
